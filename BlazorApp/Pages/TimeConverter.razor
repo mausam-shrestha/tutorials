@@ -1,0 +1,16 @@
+@page "/time-converter"
+
+<PageTitle>Time Converter</PageTitle>
+
+<h1>Time Converter</h1>
+
+<p>It is @timeInNepal in Nepal.</p>
+
+@code {
+    private DateTime timeInNepal;
+
+    protected override void OnInitialized()
+    {
+        timeInNepal = DateTime.UtcNow.AddHours(5).AddMinutes(45);
+    }
+}
